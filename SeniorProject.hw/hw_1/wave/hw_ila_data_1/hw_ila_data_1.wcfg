@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/XilinxProjects/SeniorProject/SeniorProject.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="19" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0/inst/posedge_sync_inst_n_0" type="logic">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0/inst/posedge_sync_inst_n_0</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0/inst/posedge_sync_inst_n_0</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARBURST" type="array">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARBURST[1:0]</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARBURST[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARCACHE" type="array">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARCACHE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARCACHE[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR" type="array">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLEN" type="array">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLEN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLEN[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARPROT" type="array">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARPROT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARPROT[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARSIZE" type="array">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARSIZE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARSIZE[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARQOS" type="array">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARQOS[3:0]</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARQOS[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RRESP" type="array">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_RRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_RRESP[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA" type="array">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARID" type="logic">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARID</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARID</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLOCK" type="logic">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLOCK</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLOCK</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARREADY" type="logic">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARREADY</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARUSER" type="logic">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARUSER</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARUSER</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARVALID" type="logic">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARVALID</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARVALID</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RID" type="logic">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_RID</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_RID</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RLAST" type="logic">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_RLAST</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_RLAST</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RREADY" type="logic">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_RREADY</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RVALID" type="logic">
+      <obj_property name="ElementShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">system_i/sprite_engine_0_M_FRAMEREAD_AXI_RVALID</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

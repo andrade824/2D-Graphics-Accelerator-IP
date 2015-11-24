@@ -1,7 +1,7 @@
 # Exclude build result files
-SeniorProject.cache/
-SeniorProject.runs/
-SeniorProject.tmp/
+SeniorProject.cache/*
+SeniorProject.runs/*
+SeniorProject.tmp/*
 #########
 #Exclude all
 #########

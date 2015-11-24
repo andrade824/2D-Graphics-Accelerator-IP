@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2015.1 (64-bit)                     -->
+<!--                                                              -->
+<!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.        -->
+
+<hwsession version="1" minor="1">
+  <device name="xc7z010_1" gui_info="dashboard1=hw_ila_1[xc7z010_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7z010_1/hw_ila_1/Status=ILA_STATUS_1;xc7z010_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z010_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z010_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;],dashboard2=hw_ila_2[xc7z010_1/hw_ila_2/Capture Setup=ILA_CAPTURE_1;xc7z010_1/hw_ila_2/Settings=ILA_SETTINGS_1;xc7z010_1/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7z010_1/hw_ila_2/Status=ILA_STATUS_1;xc7z010_1/hw_ila_2/Waveform=ILA_WAVE_1;]"/>
+  <ObjectList object_type="hw_device" gui_info="">
+    <Object name="xc7z010_1" gui_info="">
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/debug_nets.ltx"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/system_wrapper.bit"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="u_ila_0_0" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="u_ila_1" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="system_i/sprite_engine_0/inst/posedge_sync_inst_n_0" gui_info=""/>
+    <Object name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[31:0]" gui_info=""/>
+  </ObjectList>
+  <ObjectList object_type="hw_sysmon" gui_info="">
+    <Object name="XADC" gui_info="dashboard_1=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;]"/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0/inst/blank_n"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0/inst/framereader_inst/current_state[1]"/>
+        <net name="system_i/sprite_engine_0/inst/framereader_inst/current_state[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0/inst/posedge_sync_inst_n_0"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0/inst/v_blank"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0/inst/v_sync"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[31]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[30]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[29]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[28]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[27]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[26]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[25]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[24]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[23]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[22]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[21]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[20]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[19]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[18]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[17]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[16]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[15]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[14]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[13]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[12]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[11]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[10]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[9]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[8]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[7]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[6]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[5]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[4]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[3]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[2]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[1]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARADDR[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARBURST[1]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARBURST[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARCACHE[3]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARCACHE[2]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARCACHE[1]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARCACHE[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARID"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLEN[7]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLEN[6]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLEN[5]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLEN[4]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLEN[3]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLEN[2]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLEN[1]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLEN[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARLOCK"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq3&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARPROT[2]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARPROT[1]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARPROT[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARQOS[3]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARQOS[2]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARQOS[1]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARQOS[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARREADY"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq3&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARSIZE[2]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARSIZE[1]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARSIZE[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARUSER"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_ARVALID"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[31]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[30]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[29]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[28]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[27]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[26]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[25]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[24]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[23]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[22]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[21]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[20]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[19]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[18]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[17]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[16]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[15]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[14]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[13]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[12]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[11]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[10]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[9]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[8]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[7]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[6]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[5]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[4]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[3]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[2]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[1]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RDATA[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RID"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RLAST"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RREADY"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RRESP[1]"/>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RRESP[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RUSER"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+      </probeOptions>
+      <nets>
+        <net name="system_i/sprite_engine_0_M_FRAMEREAD_AXI_RVALID"/>
+      </nets>
+    </probe>
+  </probeset>
+</hwsession>
