@@ -16,6 +16,7 @@ SeniorProject.tmp/*
 #########
 #Do NOT ignore VHDL, Verilog, block diagrams or EDIF files.
 !*.vhd
+!*.sv
 !*.v
 !*.bd
 !*.edif
