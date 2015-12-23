@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:19:00 MDT 2015
+# 
+# Start of session at: Tue Dec 15 13:37:09 2015
+# Process ID: 6271
+# Log file: /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/webtalk/webtalk.log
+# Journal file: /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

@@ -55,13 +55,13 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// CLK_OUT1___100.000______0.000______50.0______116.394_____87.466
-// CLK_OUT2____25.266______0.000______50.0______155.403_____87.466
+// CLK_OUT1___100.000______0.000______50.0______112.754_____86.070
+// CLK_OUT2____25.266______0.000______50.0______148.894_____86.070
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
 //----------------------------------------------------------------------------
-// __primary_________100.000____________0.010
+// __primary_________125.000____________0.010
 
 `timescale 1ps/1ps
 
@@ -70,9 +70,7 @@ module system_clk_wiz_0_0_clk_wiz
   input         clk_in1,
   // Clock out ports
   output        clk_out1,
-  output        clk_out2,
-  // Status and control signals
-  input         resetn
+  output        clk_out2
  );
 
   // Input buffering
@@ -106,7 +104,6 @@ module system_clk_wiz_0_0_clk_wiz
   wire        clkout6_unused;
   wire        clkfbstopped_unused;
   wire        clkinstopped_unused;
-  wire        reset_high;
 
   MMCME2_ADV
   #(.BANDWIDTH            ("OPTIMIZED"),
@@ -114,7 +111,7 @@ module system_clk_wiz_0_0_clk_wiz
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
     .DIVCLK_DIVIDE        (1),
-    .CLKFBOUT_MULT_F      (11.875),
+    .CLKFBOUT_MULT_F      (9.500),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
     .CLKOUT0_DIVIDE_F     (11.875),
@@ -125,7 +122,7 @@ module system_clk_wiz_0_0_clk_wiz
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
-    .CLKIN1_PERIOD        (10.0))
+    .CLKIN1_PERIOD        (8.0))
   mmcm_adv_inst
     // Output clocks
    (
@@ -166,9 +163,8 @@ module system_clk_wiz_0_0_clk_wiz
     .CLKINSTOPPED        (clkinstopped_unused),
     .CLKFBSTOPPED        (clkfbstopped_unused),
     .PWRDWN              (1'b0),
-    .RST                 (reset_high));
+    .RST                 (1'b0));
 
-  assign reset_high = ~resetn; 
 
 
   // Output buffering

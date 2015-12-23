@@ -81,7 +81,7 @@ int main()
 
     ClearScreen(frame, 0, 0, 0);
 
-    DrawRectangle(frame, 0, 0, 200, 200, 31, 63, 31);
+    //DrawRectangle(frame, 0, 0, 200, 200, 31, 63, 31);
 
     // Draw stuff
     //AlternatingColors(frame);
@@ -94,6 +94,30 @@ int main()
     SPRITE_ENGINE_mWriteReg(XPAR_SPRITE_ENGINE_0_S_TEST_AXI_BASEADDR, 0, frame);
 
 	print("Hello Worfld\n\r");
+
+	int i = 0;
+	int toggle = 0;
+	for(i = 0; i < (WIDTH * HEIGHT); i = i + 4)
+	{
+		if(toggle)
+		{
+			*(frame + i) = pixel_to_int(31,0,0);
+			*(frame + i + 1) = pixel_to_int(31,0,0);
+			*(frame + i + 2) = pixel_to_int(31,0,0);
+			*(frame + i + 3) = pixel_to_int(31,0,0);
+			toggle = 0;
+		}
+		else
+		{
+			*(frame + i) = pixel_to_int(0,63,0);
+			*(frame + i + 1) = pixel_to_int(0,63,0);
+			*(frame + i + 2) = pixel_to_int(0,63,0);
+			*(frame + i + 3) = pixel_to_int(0,63,0);
+			toggle = 1;
+		}
+	}
+
+	DrawRectangle(frame, WIDTH - 33, HEIGHT - 33, WIDTH - 5, HEIGHT - 1, 31, 63, 31);
 
     while(1)
     {
@@ -134,21 +158,21 @@ void AlternatingColors(u16 * frame)
 			*(frame + i) = pixel_to_int(0,63,0);
 		}
 
-		usleep(100000);
-
-		for(i = 0; i < (WIDTH * HEIGHT) / 2; ++i)
-		{
-			*(frame + i) = pixel_to_int(0,0,31);
-		}
-
-		for(i = (WIDTH * HEIGHT) / 2; i < (WIDTH * HEIGHT); ++i)
-		{
-			*(frame + i) = pixel_to_int(31,63,0);
-		}
-
-		DrawRectangle(frame, 200, 200, 400, 300, 31, 63, 31);
-
-		usleep(100000);
+//		usleep(500000);
+//
+//		for(i = 0; i < (WIDTH * HEIGHT) / 2; ++i)
+//		{
+//			*(frame + i) = pixel_to_int(0,0,31);
+//		}
+//
+//		for(i = (WIDTH * HEIGHT) / 2; i < (WIDTH * HEIGHT); ++i)
+//		{
+//			*(frame + i) = pixel_to_int(31,63,0);
+//		}
+//
+//		DrawRectangle(frame, 200, 200, 400, 300, 31, 63, 31);
+//
+//		usleep(500000);
 	}
 }
 

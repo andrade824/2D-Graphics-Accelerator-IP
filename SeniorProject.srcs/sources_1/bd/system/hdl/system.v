@@ -1,8 +1,8 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-//Date        : Tue Nov 17 20:49:07 2015
-//Host        : Devon-Win8 running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+//Date        : Sat Dec 19 18:22:32 2015
+//Host        : devon-debian running 64-bit Debian GNU/Linux testing/unstable
 //Command     : generate_target system.bd
 //Design      : system
 //Purpose     : IP block netlist
@@ -1125,7 +1125,7 @@ module s00_couplers_imp_IK3G2O
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipProduct=Vivado 2015.1,x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=19,numReposBlks=11,numNonXlnxBlks=1,numHierBlks=8,maxHierDepth=0,da_axi4_cnt=6,da_board_cnt=4,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "system.hwdef" *) 
+(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipProduct=Vivado 2015.1,x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=19,numReposBlks=11,numNonXlnxBlks=1,numHierBlks=8,maxHierDepth=0,da_axi4_cnt=6,da_board_cnt=6,da_ps7_cnt=1,synth_mode=Global}" *) (* HW_HANDOFF = "system.hwdef" *) 
 module system
    (DDR_addr,
     DDR_ba,
@@ -1142,6 +1142,7 @@ module system
     DDR_ras_n,
     DDR_reset_n,
     DDR_we_n,
+    Ethernet125Mhz,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
     FIXED_IO_mio,
@@ -1154,6 +1155,7 @@ module system
     h_sync,
     leds_tri_o,
     red,
+    reset_rtl,
     switches_tri_i,
     v_sync);
   inout [14:0]DDR_addr;
@@ -1171,6 +1173,7 @@ module system
   inout DDR_ras_n;
   inout DDR_reset_n;
   inout DDR_we_n;
+  input Ethernet125Mhz;
   inout FIXED_IO_ddr_vrn;
   inout FIXED_IO_ddr_vrp;
   inout [53:0]FIXED_IO_mio;
@@ -1178,11 +1181,12 @@ module system
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   output [4:0]blue;
-  input [3:0]btns_tri_i;
+  input [2:0]btns_tri_i;
   output [5:0]green;
   output h_sync;
   output [3:0]leds_tri_o;
   output [4:0]red;
+  input reset_rtl;
   input [3:0]switches_tri_i;
   output v_sync;
 
@@ -1205,7 +1209,8 @@ module system
   wire axi_mem_intercon_M00_AXI_RREADY;
   wire [1:0]axi_mem_intercon_M00_AXI_RRESP;
   wire axi_mem_intercon_M00_AXI_RVALID;
-  wire [3:0]btns_gpio_GPIO_TRI_I;
+  wire [2:0]btns_gpio_GPIO_TRI_I;
+  wire clk_in1_1;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_clk_out2;
   wire [3:0]leds_gpio_GPIO_TRI_O;
@@ -1224,8 +1229,6 @@ module system
   wire processing_system7_0_DDR_RAS_N;
   wire processing_system7_0_DDR_RESET_N;
   wire processing_system7_0_DDR_WE_N;
-  wire processing_system7_0_FCLK_CLK0;
-  wire processing_system7_0_FCLK_RESET0_N;
   wire processing_system7_0_FIXED_IO_DDR_VRN;
   wire processing_system7_0_FIXED_IO_DDR_VRP;
   wire [53:0]processing_system7_0_FIXED_IO_MIO;
@@ -1340,27 +1343,28 @@ module system
   wire processing_system7_0_axi_periph_M03_AXI_WREADY;
   wire [3:0]processing_system7_0_axi_periph_M03_AXI_WSTRB;
   wire processing_system7_0_axi_periph_M03_AXI_WVALID;
+  wire reset_rtl_1;
   wire [0:0]rst_processing_system7_0_100M_interconnect_aresetn;
   wire [0:0]rst_processing_system7_0_100M_peripheral_aresetn;
-  (* MARK_DEBUG *) wire [31:0]sprite_engine_0_M_FRAMEREAD_AXI_ARADDR;
-  (* MARK_DEBUG *) wire [1:0]sprite_engine_0_M_FRAMEREAD_AXI_ARBURST;
-  (* MARK_DEBUG *) wire [3:0]sprite_engine_0_M_FRAMEREAD_AXI_ARCACHE;
-  (* MARK_DEBUG *) wire [0:0]sprite_engine_0_M_FRAMEREAD_AXI_ARID;
-  (* MARK_DEBUG *) wire [7:0]sprite_engine_0_M_FRAMEREAD_AXI_ARLEN;
-  (* MARK_DEBUG *) wire sprite_engine_0_M_FRAMEREAD_AXI_ARLOCK;
-  (* MARK_DEBUG *) wire [2:0]sprite_engine_0_M_FRAMEREAD_AXI_ARPROT;
-  (* MARK_DEBUG *) wire [3:0]sprite_engine_0_M_FRAMEREAD_AXI_ARQOS;
-  (* MARK_DEBUG *) wire sprite_engine_0_M_FRAMEREAD_AXI_ARREADY;
-  (* MARK_DEBUG *) wire [2:0]sprite_engine_0_M_FRAMEREAD_AXI_ARSIZE;
-  (* MARK_DEBUG *) wire [0:0]sprite_engine_0_M_FRAMEREAD_AXI_ARUSER;
-  (* MARK_DEBUG *) wire sprite_engine_0_M_FRAMEREAD_AXI_ARVALID;
-  (* MARK_DEBUG *) wire [31:0]sprite_engine_0_M_FRAMEREAD_AXI_RDATA;
-  (* MARK_DEBUG *) wire [0:0]sprite_engine_0_M_FRAMEREAD_AXI_RID;
-  (* MARK_DEBUG *) wire sprite_engine_0_M_FRAMEREAD_AXI_RLAST;
-  (* MARK_DEBUG *) wire sprite_engine_0_M_FRAMEREAD_AXI_RREADY;
-  (* MARK_DEBUG *) wire [1:0]sprite_engine_0_M_FRAMEREAD_AXI_RRESP;
-  (* MARK_DEBUG *) wire [0:0]sprite_engine_0_M_FRAMEREAD_AXI_RUSER;
-  (* MARK_DEBUG *) wire sprite_engine_0_M_FRAMEREAD_AXI_RVALID;
+  wire [31:0]sprite_engine_0_M_FRAMEREAD_AXI_ARADDR;
+  wire [1:0]sprite_engine_0_M_FRAMEREAD_AXI_ARBURST;
+  wire [3:0]sprite_engine_0_M_FRAMEREAD_AXI_ARCACHE;
+  wire [0:0]sprite_engine_0_M_FRAMEREAD_AXI_ARID;
+  wire [7:0]sprite_engine_0_M_FRAMEREAD_AXI_ARLEN;
+  wire sprite_engine_0_M_FRAMEREAD_AXI_ARLOCK;
+  wire [2:0]sprite_engine_0_M_FRAMEREAD_AXI_ARPROT;
+  wire [3:0]sprite_engine_0_M_FRAMEREAD_AXI_ARQOS;
+  wire sprite_engine_0_M_FRAMEREAD_AXI_ARREADY;
+  wire [2:0]sprite_engine_0_M_FRAMEREAD_AXI_ARSIZE;
+  wire [0:0]sprite_engine_0_M_FRAMEREAD_AXI_ARUSER;
+  wire sprite_engine_0_M_FRAMEREAD_AXI_ARVALID;
+  wire [31:0]sprite_engine_0_M_FRAMEREAD_AXI_RDATA;
+  wire [0:0]sprite_engine_0_M_FRAMEREAD_AXI_RID;
+  wire sprite_engine_0_M_FRAMEREAD_AXI_RLAST;
+  wire sprite_engine_0_M_FRAMEREAD_AXI_RREADY;
+  wire [1:0]sprite_engine_0_M_FRAMEREAD_AXI_RRESP;
+  wire [0:0]sprite_engine_0_M_FRAMEREAD_AXI_RUSER;
+  wire sprite_engine_0_M_FRAMEREAD_AXI_RVALID;
   wire [4:0]sprite_engine_0_blue;
   wire [5:0]sprite_engine_0_green;
   wire sprite_engine_0_h_sync;
@@ -1369,11 +1373,13 @@ module system
   wire [3:0]switches_gpio_GPIO_TRI_I;
 
   assign blue[4:0] = sprite_engine_0_blue;
-  assign btns_gpio_GPIO_TRI_I = btns_tri_i[3:0];
+  assign btns_gpio_GPIO_TRI_I = btns_tri_i[2:0];
+  assign clk_in1_1 = Ethernet125Mhz;
   assign green[5:0] = sprite_engine_0_green;
   assign h_sync = sprite_engine_0_h_sync;
   assign leds_tri_o[3:0] = leds_gpio_GPIO_TRI_O;
   assign red[4:0] = sprite_engine_0_red;
+  assign reset_rtl_1 = reset_rtl;
   assign switches_gpio_GPIO_TRI_I = switches_tri_i[3:0];
   assign v_sync = sprite_engine_0_v_sync;
   GND GND
@@ -1445,10 +1451,9 @@ module system
         .s_axi_wstrb(processing_system7_0_axi_periph_M02_AXI_WSTRB),
         .s_axi_wvalid(processing_system7_0_axi_periph_M02_AXI_WVALID));
   system_clk_wiz_0_0 clk_wiz_0
-       (.clk_in1(processing_system7_0_FCLK_CLK0),
+       (.clk_in1(clk_in1_1),
         .clk_out1(clk_wiz_0_clk_out1),
-        .clk_out2(clk_wiz_0_clk_out2),
-        .resetn(processing_system7_0_FCLK_RESET0_N));
+        .clk_out2(clk_wiz_0_clk_out2));
   system_axi_gpio_0_0 leds_gpio
        (.gpio_io_o(leds_gpio_GPIO_TRI_O),
         .s_axi_aclk(clk_wiz_0_clk_out1),
@@ -1488,8 +1493,6 @@ module system
         .DDR_VRN(FIXED_IO_ddr_vrn),
         .DDR_VRP(FIXED_IO_ddr_vrp),
         .DDR_WEB(DDR_we_n),
-        .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
-        .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
         .MIO(FIXED_IO_mio[53:0]),
         .M_AXI_GP0_ACLK(clk_wiz_0_clk_out1),
         .M_AXI_GP0_ARADDR(processing_system7_0_M_AXI_GP0_ARADDR),
@@ -1693,7 +1696,7 @@ module system
   system_rst_processing_system7_0_100M_0 rst_processing_system7_0_100M
        (.aux_reset_in(VCC_1),
         .dcm_locked(VCC_1),
-        .ext_reset_in(processing_system7_0_FCLK_RESET0_N),
+        .ext_reset_in(reset_rtl_1),
         .interconnect_aresetn(rst_processing_system7_0_100M_interconnect_aresetn),
         .mb_debug_sys_rst(GND_1),
         .peripheral_aresetn(rst_processing_system7_0_100M_peripheral_aresetn),

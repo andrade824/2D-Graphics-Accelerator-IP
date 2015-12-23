@@ -7,6 +7,9 @@
 		<item value="1026" key="DIALOG_X_ORIGIN"/>
 		<item value="430" key="DIALOG_Y_ORIGIN"/>
 	</section>
+	<section name="CPathsPropertyPage">
+		<item value="0" key="pageIndex"/>
+	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>
 	<section name="completion_proposal_size">

@@ -1,8 +1,8 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
-//Date        : Tue Nov 17 20:49:07 2015
-//Host        : Devon-Win8 running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+//Date        : Sat Dec 19 18:22:33 2015
+//Host        : devon-debian running 64-bit Debian GNU/Linux testing/unstable
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
 //Purpose     : IP block netlist
@@ -25,6 +25,7 @@ module system_wrapper
     DDR_ras_n,
     DDR_reset_n,
     DDR_we_n,
+    Ethernet125Mhz,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
     FIXED_IO_mio,
@@ -37,6 +38,7 @@ module system_wrapper
     h_sync,
     leds_tri_o,
     red,
+    reset_rtl,
     switches_tri_i,
     v_sync);
   inout [14:0]DDR_addr;
@@ -54,6 +56,7 @@ module system_wrapper
   inout DDR_ras_n;
   inout DDR_reset_n;
   inout DDR_we_n;
+  input Ethernet125Mhz;
   inout FIXED_IO_ddr_vrn;
   inout FIXED_IO_ddr_vrp;
   inout [53:0]FIXED_IO_mio;
@@ -61,11 +64,12 @@ module system_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   output [4:0]blue;
-  input [3:0]btns_tri_i;
+  input [2:0]btns_tri_i;
   output [5:0]green;
   output h_sync;
   output [3:0]leds_tri_o;
   output [4:0]red;
+  input reset_rtl;
   input [3:0]switches_tri_i;
   output v_sync;
 
@@ -84,6 +88,7 @@ module system_wrapper
   wire DDR_ras_n;
   wire DDR_reset_n;
   wire DDR_we_n;
+  wire Ethernet125Mhz;
   wire FIXED_IO_ddr_vrn;
   wire FIXED_IO_ddr_vrp;
   wire [53:0]FIXED_IO_mio;
@@ -91,11 +96,12 @@ module system_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire [4:0]blue;
-  wire [3:0]btns_tri_i;
+  wire [2:0]btns_tri_i;
   wire [5:0]green;
   wire h_sync;
   wire [3:0]leds_tri_o;
   wire [4:0]red;
+  wire reset_rtl;
   wire [3:0]switches_tri_i;
   wire v_sync;
 
@@ -115,6 +121,7 @@ module system_wrapper
         .DDR_ras_n(DDR_ras_n),
         .DDR_reset_n(DDR_reset_n),
         .DDR_we_n(DDR_we_n),
+        .Ethernet125Mhz(Ethernet125Mhz),
         .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
         .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
         .FIXED_IO_mio(FIXED_IO_mio),
@@ -127,6 +134,7 @@ module system_wrapper
         .h_sync(h_sync),
         .leds_tri_o(leds_tri_o),
         .red(red),
+        .reset_rtl(reset_rtl),
         .switches_tri_i(switches_tri_i),
         .v_sync(v_sync));
 endmodule
