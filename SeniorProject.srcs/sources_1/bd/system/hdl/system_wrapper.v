@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-//Date        : Sat Dec 19 18:22:33 2015
+//Date        : Wed Jan 13 12:49:40 2016
 //Host        : devon-debian running 64-bit Debian GNU/Linux testing/unstable
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper

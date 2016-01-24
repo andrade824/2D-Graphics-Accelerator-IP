@@ -15,7 +15,8 @@
 	)
 	(
 		output wire [31:0] base_addr,
-
+        output reg enable,
+        
 		// Global Clock Signal
 		input wire  S_AXI_ACLK,
 		// Global Reset Signal. This Signal is Active LOW
@@ -386,8 +387,13 @@
 	    end
 	end    
 
-	// Add user logic here
-
-	// User logic ends
+	always @(posedge S_AXI_ACLK) begin
+	   if(S_AXI_ARESETN == 1'b0)
+	       enable <= 1'b0;
+	   else if(slv_reg_wren)
+	       enable <= 1'b1;
+	   else
+	       enable <= enable;
+	end
 
 	endmodule

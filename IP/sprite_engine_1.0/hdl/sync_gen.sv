@@ -34,6 +34,7 @@ module sync_gen #(
 )
 (
     input logic clk,
+    input logic enable,
     input logic [31:0] pixel_data,
     output logic next_pixel_please,
     output logic [4:0] red,
@@ -71,7 +72,7 @@ module sync_gen #(
     // A single active-low blanking signal when either blanking is happening
     assign blank_n = ~(h_blank | v_blank);
     
-    always_ff @(negedge clk) begin
+    always_ff @(posedge clk) begin
         if (pix_x < H_WHOLE_LINE - 1) begin // End of pixel, go to next pixel
             pix_x <= pix_x + 1;
             pix_y <= pix_y;
@@ -87,11 +88,22 @@ module sync_gen #(
     /* COLOR LOGIC */
     logic pixel_toggle;
     logic [31:0] pixel_cache;
-    
+
     // Determines when to grab the next pixel
-    assign next_pixel_please = blank_n & pixel_toggle;
+    // Make sure to update pixel cache right before the next frame begins (pre-caching the first pixel)
+    assign next_pixel_please = (blank_n & pixel_toggle) | (((pix_x == (H_WHOLE_LINE - 2)) | (pix_x == (H_WHOLE_LINE - 4))) & (pix_y == (V_WHOLE_FRAME - 1)));
+    //assign next_pixel_please = blank_n & pixel_toggle;
     
     // Toggle the pixel flag every clock edge we're displaying data
+//    always_ff @(posedge clk) begin
+//        if(pix_x == (H_WHOLE_LINE - 2) && pix_y == (V_WHOLE_FRAME - 1))
+//            pixel_toggle <= '0;
+//        else if(blank_n)
+//            pixel_toggle <= ~pixel_toggle;
+//        else
+//            pixel_toggle <= pixel_toggle;
+//    end
+    
     always_ff @(posedge clk) begin
         if(blank_n)
             pixel_toggle <= ~pixel_toggle;
@@ -113,6 +125,10 @@ module sync_gen #(
             red = '0;
             green = '0;
             blue = '0;
+        end else if (!enable) begin
+            red = '0;
+            green = '0;
+            blue = 5'b11111;
         end else begin
             case(pixel_toggle)
                 1'b0 : begin

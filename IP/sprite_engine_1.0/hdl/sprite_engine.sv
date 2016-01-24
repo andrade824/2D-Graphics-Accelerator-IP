@@ -85,6 +85,8 @@ module sprite_engine_v1_0 #
 logic v_blank, end_of_frame;
 logic next_pixel_please;
 logic [31:0] pixel_data;
+logic enable, enable_sync_gen;
+
 //logic base_addr;
 
 // Instantiation of Axi Bus Interface M_FRAMEREAD_AXI
@@ -101,6 +103,7 @@ framereader # (
     .pixel_data(pixel_data),
     .end_of_frame(end_of_frame),
     .base_addr(32'h00108078),
+    .enable(enable),
     .M_AXI_ACLK(m_frameread_axi_aclk),
     .M_AXI_ARESETN(m_frameread_axi_aresetn),
     .M_AXI_ARID(m_frameread_axi_arid),
@@ -130,6 +133,7 @@ sprite_engine_v1_0_S_TEST_AXI # (
     .C_S_AXI_ADDR_WIDTH(C_S_TEST_AXI_ADDR_WIDTH)
 ) sprite_engine_v1_0_S_TEST_AXI_inst (
     .base_addr(),
+    .enable(enable),
     .S_AXI_ACLK(s_test_axi_aclk),
     .S_AXI_ARESETN(s_test_axi_aresetn),
     .S_AXI_AWADDR(s_test_axi_awaddr),
@@ -165,6 +169,7 @@ sync_gen #(
    .V_BACK_PORCH(V_BACK_PORCH)
 ) sync_gen_1 (
    .clk(pixel_clk),
+   .enable(enable_sync_gen),
    .next_pixel_please(next_pixel_please),
    .pixel_data(pixel_data),
    .red(red),
@@ -182,6 +187,13 @@ posedge_sync posedge_sync_inst (
     .clk(m_frameread_axi_aclk),
     .sig_in(v_blank),
     .sig_out(end_of_frame)
+);
+
+// Synchronizes the enable signal to the pixel clock
+level_sync level_sync_inst (
+    .clk(pixel_clk),
+    .sig_in(enable),
+    .sig_out(enable_sync_gen)
 );
 
 endmodule

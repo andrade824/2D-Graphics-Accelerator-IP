@@ -29,6 +29,7 @@ module framereader #
     
     // Signals coming from Engine Controller
     input logic [31:0] base_addr,
+    input logic enable,
     
 	/* GENERIC SIGNALS */
 	// Global Clock Signal.
@@ -165,7 +166,7 @@ module framereader #
 	* Waits until the start_single_burst_read signal gets asserted (by the state machine)
 	* then transfers the address over to the slave.
 	*/
-    always @(posedge M_AXI_ACLK or posedge async_clear or negedge M_AXI_ARESETN)
+    always @(posedge M_AXI_ACLK)
     begin
         if (!M_AXI_ARESETN || async_clear)
             axi_arvalid <= 1'b0;
@@ -181,7 +182,7 @@ module framereader #
     * After the address is received by the slave, increment it so it's
     * ready to go for the next burst transfer
     */
-    always @(posedge M_AXI_ACLK or posedge async_clear or negedge M_AXI_ARESETN)
+    always @(posedge M_AXI_ACLK)
     begin
         if (!M_AXI_ARESETN || async_clear)
             addr_offset <= 'b0;
@@ -204,7 +205,7 @@ module framereader #
     * says they have valid data available (until we've received 
     * the last piece of data).
     */
-    always @(posedge M_AXI_ACLK or posedge async_clear or negedge M_AXI_ARESETN)
+    always @(posedge M_AXI_ACLK)
     begin
         if (!M_AXI_ARESETN || async_clear) begin
             axi_rready <= 1'b0;
@@ -275,7 +276,7 @@ module framereader #
     );
 
     // State changing logic
-    always_ff @(negedge M_AXI_ACLK or negedge M_AXI_ARESETN) begin
+    always_ff @(negedge M_AXI_ACLK) begin
         if(!M_AXI_ARESETN)
             current_state <= WAIT;
         else
@@ -291,7 +292,9 @@ module framereader #
         case(current_state)
             // Read the FIFO fill level and wait until it's not full
             WAIT : begin
-                if(frame_sync)
+                if(!enable)
+                    next_state = WAIT;
+                else if(frame_sync)
                     next_state = CLEAR_ALL;
                 else if(!fifo_almostfull)
                     next_state = START_BURST;
@@ -327,7 +330,7 @@ module framereader #
     /* Reset Logic (when the end of frame occurs) */
     
     // Capture the end_of_frame signal so it can be processed after a burst transfer is done
-    always_ff @(posedge M_AXI_ACLK or posedge async_clear or negedge M_AXI_ARESETN) begin
+    always_ff @(posedge M_AXI_ACLK) begin
         if(!M_AXI_ARESETN || async_clear)
             frame_sync <= '0;
         else if (end_of_frame)
@@ -341,7 +344,7 @@ module framereader #
     * the reset line to be asserted for at least 5 clock cycles.
     * This counter makes sure the reset is asserted (more than) long enough.
     */
-    always_ff @(posedge M_AXI_ACLK or negedge M_AXI_ARESETN) begin
+    always_ff @(posedge M_AXI_ACLK) begin
         if(!M_AXI_ARESETN)
             reset_counter <= '0;
         else if(current_state == CLEAR_ALL)
