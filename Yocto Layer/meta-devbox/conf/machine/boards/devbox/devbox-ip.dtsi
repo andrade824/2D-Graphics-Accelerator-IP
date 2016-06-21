@@ -1,0 +1,18 @@
+/ {
+
+    ps7_axi_interconnect_0: amba@0 {
+    
+        sprite_engine_0: sprite_engine@43C00000 {
+            compatible = "dsa,sprite_engine";
+            reg = < 0x43C00000 0x10000 >;
+        };
+
+        nes_controller_0: nes_controller@43C10000 {
+            compatible = "dsa,nes_controller";
+            reg = < 0x43C10000 0x10000 >;
+        };
+
+    } ;
+
+} ;
+ 

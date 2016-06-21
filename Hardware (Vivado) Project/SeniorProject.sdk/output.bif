@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+	[bootloader]/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/FSBL/Debug/FSBL.elf
+	/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit
+	/opt/yocto/poky/zybo/tmp/deploy/images/zybo-zynq7/u-boot.elf
+}

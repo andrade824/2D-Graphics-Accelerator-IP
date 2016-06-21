@@ -1,0 +1,803 @@
+19:41:14 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+19:41:17 INFO  : XSDB server has started successfully.
+19:41:17 INFO  : Processing command line option -hwspec /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf.
+19:47:37 INFO  : Inferring section assignments and sizes from elf file: /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/HardwareTest/Debug/HardwareTest.elf
+19:48:37 INFO  : Successfully generated /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/HardwareTest/src/lscript.ld.
+19:48:37 INFO  : Applying linker script to all configurations of project HardwareTest.
+19:48:37 INFO  : Setting rebuild state to true for all configurations of project HardwareTest.
+20:18:04 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+20:18:06 INFO  : XSDB server has started successfully.
+20:18:06 INFO  : Processing command line option -hwspec /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf.
+20:18:06 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+20:18:08 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1456114585000,  Project:1456112421000
+20:18:08 INFO  : The hardware specification for project 'system_wrapper_hw_platform_0' is different from /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf.
+20:18:08 INFO  : Copied contents of /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf into /system_wrapper_hw_platform_0/system.hdf.
+20:18:12 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:18:13 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-49336535eccf40af8a3c6f8a7e275e71-systemd-timesyncd.service-3tKKCY"
+
+20:18:13 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-49336535eccf40af8a3c6f8a7e275e71-rtkit-daemon.service-BW8Rfd"
+ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/pulse-PKdhtXMmr18n"
+
+20:18:13 ERROR : Failed to call sync_sw_with_hw_change
+Reason: ERROR: [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+
+20:18:13 ERROR : Error updating BSP project MSS files.
+20:18:14 INFO  : Updating hardware inferred compiler options for HardwareTest.
+20:18:14 INFO  : Clearing existing target manager status.
+20:18:24 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:18:24 ERROR :  [Common 17-39] 'hsi::current_sw_design' failed due to earlier errors.
+20:18:24 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:18:24 INFO  : Unable to read in MSS file /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/HardwareTest_bsp/system.mss : null
+20:18:24 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:18:24 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:18:25 ERROR : Failed to get_connected_periphs
+Reason: ERROR: [Common 17-55] 'get_property' expects at least one object.
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+
+20:18:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:18:32 ERROR :  [Common 17-39] 'hsi::current_sw_design' failed due to earlier errors.
+20:18:32 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:18:32 INFO  : Unable to read in MSS file /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/HardwareTest_bsp/system.mss : null
+20:18:32 ERROR : Unexpected error occurred during generating bsp sources
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:421)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:507)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:275)
+	at org.eclipse.ui.internal.progress.ProgressManager$3.run(ProgressManager.java:960)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.progress.ProgressManager.busyCursorWhile(ProgressManager.java:995)
+	at org.eclipse.ui.internal.progress.ProgressManager.busyCursorWhile(ProgressManager.java:970)
+	at org.eclipse.ui.internal.progress.ProgressManager.run(ProgressManager.java:1166)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler.execute(RegenBspSourcesHandler.java:124)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler.execute(RegenBspSourcesHandler.java:78)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:290)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:243)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:224)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:167)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:499)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:850)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.handleWidgetSelection(HandledContributionItem.java:743)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.access$7(HandledContributionItem.java:727)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem$4.handleEvent(HandledContributionItem.java:662)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3742)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3363)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+Caused by: java.lang.IllegalArgumentException: Path must include project and resource name: /HardwareTest_bsp
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.resources.Workspace.newResource(Workspace.java:2164)
+	at org.eclipse.core.internal.resources.Container.getFolder(Container.java:215)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler.internalGenerateBsp(RegenBspSourcesHandler.java:169)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler.access$2(RegenBspSourcesHandler.java:163)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler$1$1.run(RegenBspSourcesHandler.java:131)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler$1.run(RegenBspSourcesHandler.java:135)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+20:18:57 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:18:57 ERROR :  [Common 17-39] 'hsi::current_sw_design' failed due to earlier errors.
+20:18:57 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:18:57 INFO  : Unable to read in MSS file /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/HardwareTest_bsp/system.mss : null
+20:18:58 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:18:58 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:19:05 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:19:05 ERROR :  [Common 17-39] 'hsi::current_sw_design' failed due to earlier errors.
+20:19:05 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:19:05 INFO  : Unable to read in MSS file /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/HardwareTest_bsp/system.mss : null
+20:19:05 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:19:28 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:19:28 ERROR :  [Common 17-39] 'hsi::current_sw_design' failed due to earlier errors.
+20:19:28 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+20:19:29 INFO  : Unable to read in MSS file /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/HardwareTest_bsp/system.mss : null
+20:19:29 ERROR : Unexpected error occurred during generating bsp sources
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:421)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:507)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:275)
+	at org.eclipse.ui.internal.progress.ProgressManager$3.run(ProgressManager.java:960)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.progress.ProgressManager.busyCursorWhile(ProgressManager.java:995)
+	at org.eclipse.ui.internal.progress.ProgressManager.busyCursorWhile(ProgressManager.java:970)
+	at org.eclipse.ui.internal.progress.ProgressManager.run(ProgressManager.java:1166)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler.execute(RegenBspSourcesHandler.java:124)
+	at com.xilinx.sdk.sw.ui.internal.editors.MSSViewer$2.widgetSelected(MSSViewer.java:171)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3742)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3363)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+Caused by: java.lang.IllegalArgumentException: Path must include project and resource name: /HardwareTest_bsp
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:63)
+	at org.eclipse.core.internal.resources.Workspace.newResource(Workspace.java:2164)
+	at org.eclipse.core.internal.resources.Container.getFolder(Container.java:215)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler.internalGenerateBsp(RegenBspSourcesHandler.java:169)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler.access$2(RegenBspSourcesHandler.java:163)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler$1$1.run(RegenBspSourcesHandler.java:131)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at com.xilinx.sdk.sw.ui.handlers.RegenBspSourcesHandler$1.run(RegenBspSourcesHandler.java:135)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+20:20:03 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+20:20:56 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+20:20:58 INFO  : XSDB server has started successfully.
+20:23:53 INFO  : The new hardware specification file contains the same information as the current specification file. No changes were done to the workspace.
+20:24:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:24:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+20:24:34 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+20:25:21 INFO  : ps7_init is completed.
+20:25:21 INFO  : ps7_post_config is completed.
+20:25:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:52:58 INFO  : Invoking Bootgen: bootgen -image output.bif -o /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/BOOT.bin
+20:52:58 INFO  : Creating new bif file /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/output.bif
+20:52:58 INFO  : Bootgen command execution is done.
+22:13:00 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1456121531000,  Project:1456114585000
+22:13:00 INFO  : Project system_wrapper_hw_platform_0's source hardware specification located at /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+22:13:02 INFO  : Copied contents of /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf into /system_wrapper_hw_platform_0/system.hdf.
+22:13:06 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+22:13:08 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-49336535eccf40af8a3c6f8a7e275e71-systemd-timesyncd.service-3tKKCY"
+
+22:13:08 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-49336535eccf40af8a3c6f8a7e275e71-rtkit-daemon.service-BW8Rfd"
+ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/pulse-PKdhtXMmr18n"
+
+22:13:08 ERROR : Failed to call sync_sw_with_hw_change
+Reason: ERROR: [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+
+22:13:08 ERROR : Error updating BSP project MSS files.
+22:13:09 INFO  : Updating hardware inferred compiler options for FSBL.
+22:13:09 INFO  : Updating hardware inferred compiler options for HardwareTest.
+22:13:09 INFO  : Clearing existing target manager status.
+22:13:09 INFO  : Closing and re-opening the MSS file of ther project FSBL_bsp
+22:13:09 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+22:13:10 ERROR :  [Common 17-39] 'hsi::current_sw_design' failed due to earlier errors.
+22:13:10 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+22:13:10 INFO  : Unable to read in MSS file /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/FSBL_bsp/system.mss : null
+22:13:10 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+22:13:10 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+22:13:18 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+22:13:18 ERROR :  [Common 17-39] 'hsi::current_sw_design' failed due to earlier errors.
+22:13:18 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+22:13:18 INFO  : Unable to read in MSS file /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/FSBL_bsp/system.mss : null
+22:13:18 ERROR : (XSDB Server)ERROR: [Hsi 55-1558] Software Design system system is not found
+
+22:13:18 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+22:13:19 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+22:13:52 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+22:14:11 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+22:14:12 INFO  : XSDB server has started successfully.
+22:16:40 ERROR : Unexpected error while launching BSP settings dialog: 
+org.eclipse.core.commands.ExecutionException: Internal error.
+	at com.xilinx.sdk.sw.ui.BspSettingsFlow.executeFlowInternal(BspSettingsFlow.java:118)
+	at com.xilinx.sdk.sw.ui.BspSettingsFlow.executeFlow(BspSettingsFlow.java:78)
+	at com.xilinx.sdk.sw.ui.internal.editors.MSSViewer$1.widgetSelected(MSSViewer.java:150)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3742)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3363)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+Caused by: java.lang.NullPointerException
+	at com.xilinx.sdk.sw.ui.internal.SwDriversPresenter.createDriverAssignment(SwDriversPresenter.java:125)
+	at com.xilinx.sdk.sw.ui.internal.SwDriversPresenter.createDriversFromPlatform(SwDriversPresenter.java:89)
+	at com.xilinx.sdk.sw.ui.internal.SwDriversPresenter.viewReady(SwDriversPresenter.java:55)
+	at com.xilinx.sdk.sw.ui.internal.BspSettingsPresenter.viewReady(BspSettingsPresenter.java:89)
+	at com.xilinx.sdk.sw.ui.internal.BspSettingsView.createDialogArea(BspSettingsView.java:124)
+	at org.eclipse.jface.dialogs.TitleAreaDialog.createContents(TitleAreaDialog.java:158)
+	at org.eclipse.jface.window.Window.create(Window.java:432)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1104)
+	at org.eclipse.jface.window.Window.open(Window.java:791)
+	at com.xilinx.sdk.sw.ui.internal.BspSettingsPresenter.open(BspSettingsPresenter.java:77)
+	at com.xilinx.sdk.sw.ui.BspSettingsFlow.executeFlowInternal(BspSettingsFlow.java:109)
+	... 29 more
+22:16:59 ERROR : Unexpected error while launching BSP settings dialog: 
+org.eclipse.core.commands.ExecutionException: Internal error.
+	at com.xilinx.sdk.sw.ui.BspSettingsFlow.executeFlowInternal(BspSettingsFlow.java:118)
+	at com.xilinx.sdk.sw.ui.BspSettingsFlow.executeFlow(BspSettingsFlow.java:78)
+	at com.xilinx.sdk.sw.ui.internal.editors.MSSViewer$1.widgetSelected(MSSViewer.java:150)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3742)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3363)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+Caused by: java.lang.NullPointerException
+	at com.xilinx.sdk.sw.ui.internal.SwDriversPresenter.createDriverAssignment(SwDriversPresenter.java:125)
+	at com.xilinx.sdk.sw.ui.internal.SwDriversPresenter.createDriversFromPlatform(SwDriversPresenter.java:89)
+	at com.xilinx.sdk.sw.ui.internal.SwDriversPresenter.viewReady(SwDriversPresenter.java:55)
+	at com.xilinx.sdk.sw.ui.internal.BspSettingsPresenter.viewReady(BspSettingsPresenter.java:89)
+	at com.xilinx.sdk.sw.ui.internal.BspSettingsView.createDialogArea(BspSettingsView.java:124)
+	at org.eclipse.jface.dialogs.TitleAreaDialog.createContents(TitleAreaDialog.java:158)
+	at org.eclipse.jface.window.Window.create(Window.java:432)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1104)
+	at org.eclipse.jface.window.Window.open(Window.java:791)
+	at com.xilinx.sdk.sw.ui.internal.BspSettingsPresenter.open(BspSettingsPresenter.java:77)
+	at com.xilinx.sdk.sw.ui.BspSettingsFlow.executeFlowInternal(BspSettingsFlow.java:109)
+	... 29 more
+22:17:17 ERROR : Unexpected error while launching BSP settings dialog: 
+org.eclipse.core.commands.ExecutionException: Internal error.
+	at com.xilinx.sdk.sw.ui.BspSettingsFlow.executeFlowInternal(BspSettingsFlow.java:118)
+	at com.xilinx.sdk.sw.ui.BspSettingsFlow.executeFlow(BspSettingsFlow.java:78)
+	at com.xilinx.sdk.sw.ui.internal.editors.MSSViewer$1.widgetSelected(MSSViewer.java:150)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3742)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3363)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+Caused by: java.lang.NullPointerException
+	at com.xilinx.sdk.sw.ui.internal.SwDriversPresenter.createDriverAssignment(SwDriversPresenter.java:125)
+	at com.xilinx.sdk.sw.ui.internal.SwDriversPresenter.createDriversFromPlatform(SwDriversPresenter.java:89)
+	at com.xilinx.sdk.sw.ui.internal.SwDriversPresenter.viewReady(SwDriversPresenter.java:55)
+	at com.xilinx.sdk.sw.ui.internal.BspSettingsPresenter.viewReady(BspSettingsPresenter.java:89)
+	at com.xilinx.sdk.sw.ui.internal.BspSettingsView.createDialogArea(BspSettingsView.java:124)
+	at org.eclipse.jface.dialogs.TitleAreaDialog.createContents(TitleAreaDialog.java:158)
+	at org.eclipse.jface.window.Window.create(Window.java:432)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1104)
+	at org.eclipse.jface.window.Window.open(Window.java:791)
+	at com.xilinx.sdk.sw.ui.internal.BspSettingsPresenter.open(BspSettingsPresenter.java:77)
+	at com.xilinx.sdk.sw.ui.BspSettingsFlow.executeFlowInternal(BspSettingsFlow.java:109)
+	... 29 more
+22:20:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:20:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+22:20:14 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+22:20:26 INFO  : ps7_init is completed.
+22:20:26 INFO  : ps7_post_config is completed.
+22:20:26 INFO  : Processor reset is completed for ps7_cortexa9_0
+22:22:37 INFO  : Invoking Bootgen: bootgen -image output.bif -o /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/BOOT.bin -w on
+22:22:37 INFO  : Bootgen command execution is done.
+23:21:24 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+14:45:02 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+14:45:03 INFO  : XSDB server has started successfully.
+14:46:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:46:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+14:46:15 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+14:47:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:47:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+14:47:17 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+15:00:00 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1456354779000,  Project:1456121531000
+15:00:00 INFO  : Project system_wrapper_hw_platform_0's source hardware specification located at /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+15:00:00 INFO  : Copied contents of /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf into /system_wrapper_hw_platform_0/system.hdf.
+15:00:05 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:00:06 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/pulse-PKdhtXMmr18n"
+
+15:00:06 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-a657c9d64039490c9915a6570eac8448-systemd-timesyncd.service-Sg69h7"
+ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-a657c9d64039490c9915a6570eac8448-rtkit-daemon.service-RaRLO7"
+
+15:00:07 ERROR : Failed to call sync_sw_with_hw_change
+Reason: ERROR: [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+
+15:00:07 ERROR : Error updating BSP project MSS files.
+15:00:07 INFO  : Updating hardware inferred compiler options for FSBL.
+15:00:08 INFO  : Updating hardware inferred compiler options for HardwareTest.
+15:00:08 INFO  : Clearing existing target manager status.
+15:00:10 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:00:22 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+15:06:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:06:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+15:06:36 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+15:07:13 INFO  : ps7_init is completed.
+15:07:13 INFO  : ps7_post_config is completed.
+15:07:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:44:52 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:49:41 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+15:49:42 INFO  : XSDB server has started successfully.
+15:50:58 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1456357841000,  Project:1456354779000
+15:50:58 INFO  : Project system_wrapper_hw_platform_0's source hardware specification located at /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+15:50:58 INFO  : Copied contents of /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf into /system_wrapper_hw_platform_0/system.hdf.
+15:51:02 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:51:03 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/pulse-PKdhtXMmr18n"
+
+15:51:03 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-a657c9d64039490c9915a6570eac8448-systemd-timesyncd.service-Sg69h7"
+ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/systemd-private-a657c9d64039490c9915a6570eac8448-rtkit-daemon.service-RaRLO7"
+
+15:51:03 ERROR : Failed to call sync_sw_with_hw_change
+Reason: ERROR: [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+
+15:51:03 ERROR : Error updating BSP project MSS files.
+15:51:04 INFO  : Updating hardware inferred compiler options for FSBL.
+15:51:05 INFO  : Updating hardware inferred compiler options for HardwareTest.
+15:51:05 INFO  : Clearing existing target manager status.
+15:51:07 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:51:23 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+15:51:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:51:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+15:51:45 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+15:51:53 INFO  : ps7_init is completed.
+15:51:53 INFO  : ps7_post_config is completed.
+15:51:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:52:08 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+15:52:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:04:36 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:04:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:04:52 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:04:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:06:22 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:06:23 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:07:07 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:07:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:08:38 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:08:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:09:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:09:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+17:09:05 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+17:09:12 INFO  : ps7_init is completed.
+17:09:12 INFO  : ps7_post_config is completed.
+17:09:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:15:12 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:15:13 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:15:32 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:15:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:16:32 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:16:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:16:50 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:16:51 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:18:09 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:18:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:26:03 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:26:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:26:36 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:27:53 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+17:27:55 INFO  : XSDB server has started successfully.
+17:30:02 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+17:30:03 INFO  : XSDB server has started successfully.
+17:30:24 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1456363584000,  Project:1456357841000
+17:30:24 INFO  : Project system_wrapper_hw_platform_0's source hardware specification located at /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+17:30:24 INFO  : Copied contents of /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf into /system_wrapper_hw_platform_0/system.hdf.
+17:30:29 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+17:30:30 INFO  : 
+17:30:32 INFO  : 
+17:30:33 INFO  : Updating hardware inferred compiler options for FSBL.
+17:30:33 INFO  : Updating hardware inferred compiler options for HardwareTest.
+17:30:33 INFO  : Clearing existing target manager status.
+17:30:36 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+17:30:37 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+17:31:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:31:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+17:31:59 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+17:32:58 INFO  : ps7_init is completed.
+17:32:58 INFO  : ps7_post_config is completed.
+17:32:58 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:43:38 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:43:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:10:52 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1456366241000,  Project:1456363584000
+18:10:52 INFO  : Project system_wrapper_hw_platform_0's source hardware specification located at /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+18:10:52 INFO  : Copied contents of /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf into /system_wrapper_hw_platform_0/system.hdf.
+18:10:57 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+18:11:00 INFO  : 
+18:11:01 INFO  : 
+18:11:02 INFO  : Updating hardware inferred compiler options for FSBL.
+18:11:03 INFO  : Updating hardware inferred compiler options for HardwareTest.
+18:11:03 INFO  : Clearing existing target manager status.
+18:11:03 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+18:11:04 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+18:12:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:12:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+18:12:11 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+18:13:47 INFO  : ps7_init is completed.
+18:13:47 INFO  : ps7_post_config is completed.
+18:13:47 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:26:05 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:26:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:26:19 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:26:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:26:39 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:26:40 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:27:33 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:27:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:33:04 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:33:05 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:33:44 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:33:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:34:41 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:34:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:36:35 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:36:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:38:40 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:38:41 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:43:34 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:43:36 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:43:52 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:43:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:47:42 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:47:43 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:48:17 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:48:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:52:07 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:52:08 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:53:40 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:53:42 INFO  : Processor reset is completed for ps7_cortexa9_0
+20:51:38 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:55:42 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:55:43 INFO  : XSDB server has started successfully.
+13:23:57 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1456435369000,  Project:1456366241000
+13:23:57 INFO  : Project system_wrapper_hw_platform_0's source hardware specification located at /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:23:57 INFO  : Copied contents of /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf into /system_wrapper_hw_platform_0/system.hdf.
+13:24:03 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:24:05 INFO  : 
+13:24:07 INFO  : 
+13:24:07 INFO  : Updating hardware inferred compiler options for FSBL.
+13:24:08 INFO  : Updating hardware inferred compiler options for HardwareTest.
+13:24:08 INFO  : Clearing existing target manager status.
+13:24:10 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:24:12 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:38:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:38:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+13:38:08 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+13:38:16 INFO  : ps7_init is completed.
+13:38:16 INFO  : ps7_post_config is completed.
+13:38:16 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:40:23 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:40:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:43:09 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:43:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:50:34 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:50:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:52:17 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1456437117000,  Project:1456435369000
+13:52:17 INFO  : Project system_wrapper_hw_platform_0's source hardware specification located at /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:52:17 INFO  : Copied contents of /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf into /system_wrapper_hw_platform_0/system.hdf.
+13:52:22 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:52:23 INFO  : 
+13:52:24 INFO  : 
+13:52:25 INFO  : Updating hardware inferred compiler options for FSBL.
+13:52:26 INFO  : Updating hardware inferred compiler options for HardwareTest.
+13:52:26 INFO  : Clearing existing target manager status.
+13:52:26 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:52:27 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:52:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:52:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+13:52:57 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+13:53:03 INFO  : ps7_init is completed.
+13:53:03 INFO  : ps7_post_config is completed.
+13:53:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:54:48 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:54:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:55:10 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:55:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:55:28 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:55:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:55:48 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:55:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:56:06 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:56:07 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:08:44 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:08:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:09:02 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:09:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:35:42 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1456439723000,  Project:1456437117000
+14:35:42 INFO  : Project system_wrapper_hw_platform_0's source hardware specification located at /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+14:35:42 INFO  : Copied contents of /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf into /system_wrapper_hw_platform_0/system.hdf.
+14:35:47 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:35:49 INFO  : 
+14:35:50 INFO  : 
+14:35:51 INFO  : Updating hardware inferred compiler options for FSBL.
+14:35:52 INFO  : Updating hardware inferred compiler options for HardwareTest.
+14:35:52 INFO  : Clearing existing target manager status.
+14:35:52 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+14:35:53 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+14:36:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:36:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+14:36:50 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+14:37:00 INFO  : ps7_init is completed.
+14:37:00 INFO  : ps7_post_config is completed.
+14:37:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:39:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:39:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+14:39:03 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+14:39:28 INFO  : ps7_init is completed.
+14:39:28 INFO  : ps7_post_config is completed.
+14:39:28 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:41:44 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:41:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:42:42 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:42:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:43:02 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:43:04 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:43:33 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:43:35 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:43:52 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:43:53 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:44:10 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:44:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:45:21 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:45:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:45:36 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:45:37 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:45:48 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:45:49 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:55:09 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:55:10 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:55:20 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:55:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:55:29 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:55:30 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:57:00 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:57:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:57:09 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:57:11 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:57:19 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:57:21 INFO  : Processor reset is completed for ps7_cortexa9_0
+15:31:10 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:27:45 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+17:27:47 INFO  : XSDB server has started successfully.
+17:27:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:27:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+17:27:59 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+17:28:32 INFO  : ps7_init is completed.
+17:28:32 INFO  : ps7_post_config is completed.
+17:28:33 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:28:51 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:28:52 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:29:44 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:29:46 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:31:02 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:31:03 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:31:24 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:31:25 INFO  : Processor reset is completed for ps7_cortexa9_0
+17:37:10 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+10:47:58 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+10:48:00 INFO  : XSDB server has started successfully.
+10:52:57 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1457808758000,  Project:1456439723000
+10:52:57 INFO  : Project system_wrapper_hw_platform_0's source hardware specification located at /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+10:52:57 INFO  : Copied contents of /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf into /system_wrapper_hw_platform_0/system.hdf.
+10:53:02 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:53:04 INFO  : 
+10:53:05 INFO  : 
+10:53:06 INFO  : Updating hardware inferred compiler options for FSBL.
+10:53:07 INFO  : Updating hardware inferred compiler options for HardwareTest.
+10:53:07 INFO  : Clearing existing target manager status.
+10:53:09 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+10:53:10 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+10:53:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:53:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+10:53:45 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+10:53:54 INFO  : ps7_init is completed.
+10:53:54 INFO  : ps7_post_config is completed.
+10:53:54 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:28:12 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:28:14 INFO  : XSDB server has started successfully.
+11:28:19 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1457809018000,  Project:1457808758000
+11:28:19 INFO  : Project system_wrapper_hw_platform_0's source hardware specification located at /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+11:28:21 INFO  : Copied contents of /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf into /system_wrapper_hw_platform_0/system.hdf.
+11:28:30 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+11:28:31 INFO  : 
+11:28:33 INFO  : 
+11:28:34 INFO  : Updating hardware inferred compiler options for FSBL.
+11:28:34 INFO  : Updating hardware inferred compiler options for HardwareTest.
+11:28:34 INFO  : Clearing existing target manager status.
+11:28:37 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+11:28:37 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+11:29:13 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1460225848000,  Project:1457809018000
+11:29:13 INFO  : Project system_wrapper_hw_platform_0's source hardware specification located at /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+11:29:13 INFO  : Copied contents of /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf into /system_wrapper_hw_platform_0/system.hdf.
+11:29:17 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+11:29:19 INFO  : 
+11:29:20 INFO  : 
+11:29:21 INFO  : Updating hardware inferred compiler options for FSBL.
+11:29:22 INFO  : Updating hardware inferred compiler options for HardwareTest.
+11:29:22 INFO  : Clearing existing target manager status.
+11:29:22 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+11:29:23 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+11:30:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:30:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+11:30:23 INFO  : FPGA configured successfully with bitstream "/mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+11:30:31 INFO  : ps7_init is completed.
+11:30:31 INFO  : ps7_post_config is completed.
+11:30:32 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:30:43 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:32:17 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:32:18 INFO  : XSDB server has started successfully.
+11:40:39 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:40:40 INFO  : XSDB server has started successfully.
+11:40:40 INFO  : Processing command line option -hwspec /home/devon/Documents/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf.
+11:44:33 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:44:34 INFO  : XSDB server has started successfully.
+11:49:01 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:49:02 INFO  : XSDB server has started successfully.
+11:49:06 INFO  : Processing command line option -hwspec /home/devon/Documents/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf.
+11:51:10 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:51:11 INFO  : XSDB server has started successfully.
+11:51:16 INFO  : Processing command line option -hwspec /home/devon/Documents/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper.hdf.
+11:55:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:55:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+11:55:33 INFO  : FPGA configured successfully with bitstream "/home/devon/Documents/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+11:55:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:55:48 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Failed to download ELF file
+
+
+    AP transaction error (DP CTRL_STAT=0xf0000021)
+    Error Address = 0x00100000, Size = 0x00000004
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(TM.java:686)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(AppRunner.java:129)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:637)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:309)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:858)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+11:56:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:56:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+11:56:04 INFO  : FPGA configured successfully with bitstream "/home/devon/Documents/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+11:56:48 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:57:06 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:57:07 INFO  : XSDB server has started successfully.
+11:57:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:57:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+11:57:23 INFO  : FPGA configured successfully with bitstream "/home/devon/Documents/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+11:57:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:57:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+11:57:35 INFO  : FPGA configured successfully with bitstream "/home/devon/Documents/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+11:57:45 INFO  : ps7_init is completed.
+11:57:45 INFO  : ps7_post_config is completed.
+11:57:45 INFO  : Processor reset is completed for ps7_cortexa9_0
+11:59:10 INFO  : Invoking Bootgen: bootgen -image output.bif -o /mnt/Data/GitHub/2D-Graphics-Accelerator-IP/SeniorProject.sdk/BOOT.bin -w on
+11:59:11 INFO  : Bootgen command execution is done.
+12:01:37 INFO  : Invoking Bootgen: bootgen -image output.bif -o /home/devon/Documents/2D-Graphics-Accelerator-IP/SeniorProject.sdk/BOOT.bin -w on
+12:01:38 INFO  : Bootgen command execution is done.
+18:04:10 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+11:24:29 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:24:31 INFO  : XSDB server has started successfully.
+11:26:01 INFO  : Launching XSDB server: xsdb -n /opt/Xilinx/SDK/2015.4/scripts/xsdb/xsdb/xsdb-server.tcl
+11:26:03 INFO  : XSDB server has started successfully.
+11:29:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:29:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279545371A" && level==0} -index 1' command is executed.
+11:29:08 INFO  : FPGA configured successfully with bitstream "/home/devon/Documents/2D-Graphics-Accelerator-IP/SeniorProject.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+11:34:22 INFO  : ps7_init is completed.
+11:34:22 INFO  : ps7_post_config is completed.
+11:34:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:44:00 INFO  : ps7_init is completed.
+18:44:00 INFO  : ps7_post_config is completed.
+18:44:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:37:31 INFO  : ps7_init is completed.
+19:37:31 INFO  : ps7_post_config is completed.
+19:37:31 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:52:45 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

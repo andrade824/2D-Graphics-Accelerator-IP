@@ -1,0 +1,4 @@
+define KFEATURE_DESCRIPTION "Enable Contiguous Memory Allocation support (default 16MB size, debug enabled)"
+define KFEATUIRE_COMPATIBILITY board
+
+kconfig hardware cma.cfg
