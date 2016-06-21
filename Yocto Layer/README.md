@@ -1,6 +1,8 @@
- # Yocto Layer
+# Yocto Layer
 
- This yocto layer contains drivers for both the graphics hardware and NES controller, as well as example Linux applications demonstrating them.Pattern
+This yocto layer contains drivers for both the graphics hardware and NES controller, as well as example Linux applications demonstrating them.
+
+I assume you've used Yocto in the past and have successfully built a simple project.
 
 ## Folder Structure
 <b>conf</b>: Contains the device tree source for this IP to work correctly on the Zybo development kit. Also contains the devbox.conf and layer.conf files that define the layer and machine (and how this layer "overlays" the meta-xilinx layer's Zybo machine).
