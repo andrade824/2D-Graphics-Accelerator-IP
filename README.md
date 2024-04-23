@@ -1,6 +1,6 @@
 # 2D Graphics Accelerator IP
 
-This project is being used as my senior capstone project at the Oregon Institute of Technology.
+This project is being used as my Computer Engineering senior capstone project at the Oregon Institute of Technology.
 
 This hardware/software package is meant to emulate the type of graphical system found in early video
 game consoles and to provide users with a base to develop their own video games and arcade hardware.
@@ -9,6 +9,8 @@ Zynq-7000 SoC development board). The custom IP component contains modules for b
 creating/modifying framebuffers, as well as a display controller that outputs the framebuffer onto a standard
 VGA monitor. The Linux software consists of both a custom graphics driver and a user-space library to ease
 development of applications that utilize the accelerator.
+
+<img width="916" alt="image" src="https://github.com/andrade824/2D-Graphics-Accelerator-IP/assets/6765289/25973428-3aba-4f2d-b628-03b7e5fd96bc">
 
 ## Features
 <ul>
